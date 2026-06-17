@@ -1,123 +1,239 @@
 <!DOCTYPE html>
-<html lang="">
-<head>
-  <meta charset="utf-8">
-  <title>
-    Vertex Soul Studio
-  </title>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>VertexSoulStudio</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" type="image/png" href="resources/images/logos/vxs_icon.png" />
+    </head>
+    <body>
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Tektur:wght@400..900&display=swap');
+        <!-- NAV -->
+        <nav>
+            <div class="logo">
+                <a href="https://vertexsoulstudio.github.io/" id="navLogoLink" aria-label="VertexSoulStudio">
+                    <img src="resources/images/logos/vxs_icon.png" alt="VertexSoulStudio">
+                </a>
+            </div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+            </button>
+        </nav>
 
-    :root {
-      --acc-rojo: #ff004c;
-      --acc-azul: #00d0ff;
-      --bg:       #000;
-      --clear:    #ddd;
-      --gris:     #202024;
-      --text-dark:#000;
-      --carr-div: 3;
-      --strm-div: 6;
-    }
-    html {
-      color:var(--clear);
-      scroll-behavior: smooth;
-      scroll-padding-top: 50px;
-      overflow-x: hidden;
-    }
+        <!-- ABOUT -->
+        <section id="about">
+            <div class="about-text reveal">
+                <img src="resources/images/logos/vxs_logo.png" alt="VertexSoulStudio" class="about-logo">
+                <div class="about-body">
+                    <p>We are a <em>small, dedicated online studio</em> specializing in high quality, game-ready 3D character models. With over 3 years of experience in character modeling and texturing, we create optimized assets tailored specifically for video game development.
+                    </p>
+                </div>
+            </div>
 
-    body{
-      padding:0;
-      margin:0;
-    }
+            <div class="about-carousel reveal reveal-delay-2">
+                <button class="carousel-btn prev-btn" onclick="moveSlide(-1)" aria-label="Previous">&#10094;</button>
+                <div class="carousel-track" id="carouselTrack">
+                    <img src="resources/images/carousel/belle.png"          alt="Belle">
+                    <img src="resources/images/carousel/mim.png"            alt="Mim">
+                    <img src="resources/images/carousel/mrhuman.png"        alt="MrHuman">
+                    <img src="resources/images/carousel/pink.png"           alt="Pink">
+                    <img src="resources/images/carousel/mrpuzzles.png"      alt="MrPuzzles">
+                    <img src="resources/images/carousel/calendargirl.png"   alt="CalendarGirl">
+                </div>
+                <button class="carousel-btn next-btn" onclick="moveSlide(1)" aria-label="Next">&#10095;</button>
+            </div>
+        </section>
 
-    h1{
-      color: var(--clear);
-      font-family: "Bruno Ace SC", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-      margin: 15px;
-      font-size: 72px;
-    }
+        <!-- PORTFOLIO -->
+        <section id="portfolio">
+            <div class="reveal">
+                <h2>Portfolio</h2>
+            </div>
+            <div class="portfolio-grid">
+            <a class="portfolio-card reveal reveal-delay-3" href="https://www.artstation.com/artwork/8BQ1DO" target="_blank" rel="noopener">
+                    <img src="resources/images/portfolio/belle.jpg" alt="Belle">
+                    <div class="portfolio-card-overlay">
+                        <div class="portfolio-card-title">Belle</div>
+                        <div class="portfolio-card-cta">View on ArtStation ↗</div>
+                    </div>
+                </a>
+            <a class="portfolio-card reveal reveal-delay-3" href="https://www.artstation.com/artwork/a0vvd0" target="_blank" rel="noopener">
+                    <img src="resources/images/portfolio/mim.jpg" alt="Mim">
+                    <div class="portfolio-card-overlay">
+                        <div class="portfolio-card-title">Mim</div>
+                        <div class="portfolio-card-cta">View on ArtStation ↗</div>
+                    </div>
+                </a>
+            <a class="portfolio-card reveal reveal-delay-3" href="https://www.artstation.com/artwork/QKdyNx" target="_blank" rel="noopener">
+                    <img src="resources/images/portfolio/mrhuman.jpg" alt="Mr Human">
+                    <div class="portfolio-card-overlay">
+                        <div class="portfolio-card-title">Mr. Human</div>
+                        <div class="portfolio-card-cta">View on ArtStation ↗</div>
+                    </div>
+                </a>
+                <a class="portfolio-card reveal reveal-delay-3" href="https://www.artstation.com/artwork/y4dNgO" target="_blank" rel="noopener">
+                    <img src="resources/images/portfolio/pink.jpg" alt="Pink">
+                    <div class="portfolio-card-overlay">
+                        <div class="portfolio-card-title">Pink</div>
+                        <div class="portfolio-card-cta">View on ArtStation ↗</div>
+                    </div>
+                </a>
+                <a class="portfolio-card reveal reveal-delay-2" href="https://www.artstation.com/artwork/QK1W2B" target="_blank" rel="noopener">
+                    <img src="resources/images/portfolio/mrpuzzles.jpg" alt="Mr Puzzles">
+                    <div class="portfolio-card-overlay">
+                        <div class="portfolio-card-title">Mr Puzzles</div>
+                        <div class="portfolio-card-cta">View on ArtStation ↗</div>
+                    </div>
+                </a>
+                <a class="portfolio-card reveal reveal-delay-1" href="https://www.artstation.com/artwork/x3GgoR" target="_blank" rel="noopener">
+                    <img src="resources/images/portfolio/calendargirl.jpg" alt="Calendar Girl">
+                    <div class="portfolio-card-overlay">
+                        <div class="portfolio-card-title">Calendar Girl</div>
+                        <div class="portfolio-card-cta">View on ArtStation ↗</div>
+                    </div>
+                </a>
+            </div>
+        </section>
 
-    .header{
-      margin: 0;
-      position: sticky;
-      top: 0;
-      background-color: var(--gris);
-    }
+        <!-- TESTIMONIALS -->
+        <section id="testimonials">
+            <div class="reveal">
+                <h2>Testimonials</h2>
+            </div>
+            
+            <div class="testimonial-wrapper reveal reveal-delay-1">
+                <button class="testi-btn testi-prev" id="testiPrev" aria-label="Previous Testimonial">&#10094;</button>
+                    <div class="testi-mask" style="overflow: hidden; width: 100%;">
+                        <div class="testimonial-slider" id="testiSlider">
+                            
+                            <!-- Testimonial 1 -->
+                            <div class="testi-card">
+                                <p>Very dedicated team of modellers, excellent attention to detail on the models, easy to communicate with and prices are very reasonable.</p>
+                                <div class="testi-author-info">
+                                    <div class="testi-avatar">A</div>
+                                    <div class="testi-meta">
+                                        <span class="testi-name">Arcanum(Geoffrey)</span>
+                                        <span class="testi-title">Commissoner</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Testimonial 2 -->
+                            <div class="testi-card">
+                                <p>I've always imagined my sona or any of my ocs to be given a 3D model. Thanks to VertexSoulStudio, my wish came true! I highly recommended checking out this talented studio when you get the chance to!</p>
+                                <div class="testi-author-info">
+                                    <div class="testi-avatar">P</div>
+                                    <div class="testi-meta">
+                                        <span class="testi-name">Pink</span>
+                                        <span class="testi-title">Commissoner</span>
+                                    </div>
+                                </div>
+                            </div>
 
-    .header_contenedor{
-      color: var(--clear);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+                            <!-- Testimonial 3 -->
+                            <div class="testi-card">
+                                <p>The models are really good. They got it finished really fast and the price for what you get is super good. Probably one of the best models I've ever seen.</p>
+                                <div class="testi-author-info">
+                                    <div class="testi-avatar">A</div>
+                                        <div class="testi-meta">
+                                            <span class="testi-name">Anonymous</span>
+                                            <span class="testi-title">Commissoner</span>
+                                        </div>
+                                </div>
+                            </div>
 
-    .links_contenedor{
-      color: var(--clear);
-      font-family: "Tektur", sans-serif;
-      font-size: 20px;
-      font-weight: 150;
-      margin: 15px;
-      width: 500px;
-      display: flex;
-      justify-content: space-between;
-    }
+                            <!-- Testimonial 4 -->
+                            <div class="testi-card">
+                                <p>The models are really good and detailed and the price is nice. If there were a star rating somewhere then I'd put 5.</p>
+                                <div class="testi-author-info">
+                                    <div class="testi-avatar">T</div>
+                                        <div class="testi-meta">
+                                            <span class="testi-name">ThatFlyGuyKai</span>
+                                            <span class="testi-title">Commissoner</span>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
 
-    .links_contenedor a{
-      color: var(--clear);
-      text-decoration: none;
-    }
+                <button class="testi-btn testi-next" id="testiNext" aria-label="Next Testimonial">&#10095;</button>
+            </div>
+        </section>
 
-    .link_header{
-      margin: 15px;
-    }
+        <!-- CONTACT / FOOTER -->
+        <footer id="contact">
+            <div class="footer-grid reveal">
+                <!-- Left Side: Info -->
+                <div class="footer-info">
+                    <a href="https://vertexsoulstudio.github.io/" id="footerLogoLink" aria-label="VertexSoulStudio">
+                        <img src="resources/images/logos/vxs_logo.png" alt="VertexSoulStudio">
+                    </a>
+                    <p class="footer-sub">Interested in working together?
+                    <br>Do you need a custom character model?<br><br>Let's connect!</p>
+                    <div class="contact-row">
+                        <div class="contact-item"><button type="button" class="discord-btn" id="discordBtn"                                                     aria-label="Discord">                   <i class="fa-brands fa-discord"></i>        </button>  </div>
+                        <div class="contact-item"><a href="https://x.com/vertexsoul3d"                              target="_blank"         rel="noopener"      aria-label="X">                         <i class="fa-brands fa-x-twitter"></i>      </a>       </div>
+                        <div class="contact-item"><a href="https://www.artstation.com/vertexsoulstudio"             target="_blank"         rel="noopener"      aria-label="ArtStation">                <i class="fa-brands fa-artstation"></i>     </a>       </div>
+                        <div class="contact-item"><a href="https://www.linkedin.com/company/vertexsoulstudio/"      target="_blank"         rel="noopener"      aria-label="LinkedIn">                  <i class="fa-brands fa-linkedin"></i>       </a>       </div>
+                        <div class="contact-item"><a href="https://steamcommunity.com/id/lenoax"                    target="_blank"         rel="noopener"      aria-label="Steam">                     <i class="fa-brands fa-square-steam"></i>   </a>       </div>
+                    </div>
+                </div>
+                
+                <!-- Right Side: Form -->
+                <div class="footer-form">
+                    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                        <div class="form-group">
+                            <input type="hidden" name="access_key" value="9ab6e73d-03d9-4391-84a6-1b8001f8a8cc">
+                        </div>
+                        <div>
+                            <input type="hidden" name="redirect" value="https://vertexsoulstudio.github.io/pages/contact/">
+                        </div>
+                        <div>
+                            <input type="hidden" name="from_name" value="VertexSoulStudio">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Your Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Project Details & Requirements..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
 
-    .whoarewe_container{
-      display: flex;
-      justify-content: center;
-    }
-  </style>
-</head>
+        </footer>
 
+        <div class="footer-bottom">
+            &copy; 2026 VertexSoulStudio. All Rights Reserved.
+        </div>
 
-<body style="background-color: var(--gris)">
-  <header id="header" class="header">
-    <div class="header_contenedor">
-      <div class="alto_titulo">
-        <h1>Vertex Soul Studio</h1>
-      </div>
-      <div class="links_contenedor">
-        <a href="#header" class="link_header">
-          About
-        </a>
-        <a href="#portfolio" class="link_header">
-          Portfolio
-        </a>
-        <a href="#testimonials" class="link_header">
-          Testimonials
-        </a>
-        <a href="#contact" class="link_header">
-          Contact
-        </a>
-      </div>
-    </div>
+        <!-- DISCORD MODAL -->
+        <div class="modal-overlay" id="discordModal" aria-hidden="true">
+            <div class="modal" role="dialog" aria-modal="true" aria-labelledby="discordModalTitle">
+                <button type="button" class="modal-close" id="discordModalClose" aria-label="Close">&times;</button>
+                <i class="fa-brands fa-discord modal-icon"></i>
+                <h3 id="discordModalTitle">Discord</h3>
+                <p>Contact ferpe at <strong>discord</strong></p>
+            </div>
+        </div>
 
-  </header>
-  <main>
-    <div class="whoarewe_container">
-      <div>
-        Who the fuck are we aaaaaaaaaaaaaaaaaaaaaaaaa?
-      </div>
-      <div>
-        model
-      </div>
-    </div>
-  </main>
-  <footer style="height: 2000px;">
-    La bida
-  </footer>
-</body>
+    <script src="js/script.js"></script>
+
+    </body>
 </html>
