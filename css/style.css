@@ -172,6 +172,10 @@ nav ul li a:hover::after {
 section {
     padding: 30px 6%;
 }
+section[id],
+footer[id] {
+    scroll-margin-top: 72px;
+}
 h2 {
     font-family: var(--font-display);
     font-size: 30px;
