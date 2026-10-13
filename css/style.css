@@ -364,7 +364,7 @@ h2 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0;
-	padding: 0 10rem 0 10rem;
+	padding: 0 3rem 0 3rem;
 }
 .portfolio-card {
     position: relative;
@@ -817,7 +817,7 @@ footer {
     .prev-btn { left: 18px; }
     .next-btn { right: 18px; }
 
-	.portfolio-grid { padding: 0 0 0 0;}
+	.portfolio-grid { padding: 0 3rem 0 3rem;}
     .portfolio-card { border-radius: 0px; }
     .portfolio-card img { border-radius: 45px; padding: 15px; }
     .portfolio-card-overlay { padding: 36px; }
